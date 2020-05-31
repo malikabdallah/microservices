@@ -1,0 +1,45 @@
+
+<div class="container" class="image">
+        <div class="card card-container">
+            <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card"/>
+            <form name="form-signup" (ngSubmit)="f.form.valid && inscription()" #f="ngForm" novalidate>
+                <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+                    {{errorMessage}}
+                </div>
+                <div class="alert alert-success" role="alert" *ngIf="success">
+                    {{success}}
+                </div>
+                <div class="form-group" [ngClass]="{'has-error': f.submitted && !name.valid}">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" class="form-control" id="name" [(ngModel)]="user.name" #name="ngModel" required/>
+                        <div class="alert alert-danger" *ngIf="f.submitted && !name.valid">
+                            veuillez saisir votre nom
+                        </div>
+                    </div>
+                <div class="form-group" [ngClass]="{'has-error': f.submitted && !username.valid}">
+                    <label for="username">Pseudo</label>
+                    <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.username" #username="ngModel" required/>
+                    <div class="alert alert-danger" *ngIf="f.submitted && !username.valid">
+                       veuillez saisir votre pseudo
+                    </div>
+                </div>
+                <div class="form-group" [ngClass]="{'has-error': f.submitted && !password.valid}">
+                        <label for="password">mot de passe</label>
+                        <input type="password" name="password" class="form-control" id="password" [(ngModel)]="user.password" #password="ngModel" required/>
+                        <div class="alert alert-danger" *ngIf="f.submitted && !password.valid">
+                            veuillez saisir votre mot de passe
+                        </div>
+                </div>
+
+                <div class="form-group" [ngClass]="{'has-error': f.submitted && !adresse_email.valid}">
+                    <label for="adresse_email">email </label>
+                    <input type="email" name="adresse_email" class="form-control" id="adresse_email" [(ngModel)]="user.adresse_email" #adresse_email="ngModel" required/>
+                    <div class="alert alert-danger" *ngIf="f.submitted && !adresse_email.valid">
+                        veuillez saisir votre adresse_email
+                    </div>
+            </div>
+                <button type="submit" class="btn btn-primary btn-block">Inscription</button>
+            </form>
+            <a href="/login" class="btn btn-link">J'ai deja un compte!</a>
+        </div>
+    </div>

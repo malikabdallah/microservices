@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.Menu">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="234.0" layoutY="40.0" text="MUSE D'ORLEANS">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="23.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#goconsultersalle" text="Consulter salles" />
+            <Button layoutX="23.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#ajoutersalle" text="Ajoute une salle" />
+            <Button layoutX="159.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#oeuvreconsulter" text="Consulter Oeuvres" />
+            <Button layoutX="159.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#acheterOeuvre" text="Acheter une Oeuvres" />
+            <Button layoutX="300.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#emprunterOeuvre" text="Emprunter une oeuvre" />
+            <Button layoutX="300.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#creerExposition" text="Creer exposition" />
+            <Button layoutX="441.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#organiserExposition" text="organiser exposition" />
+            <Button layoutX="449.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#consulterExposition" text="consulter exposition" />
+            <Button layoutX="56.0" onMouseClicked="#deconnexion" layoutY="225.0" mnemonicParsing="false" text="deconnexion" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+        URL location = VueCombat.class.getResource("combat.fxml");
+        FXMLLoader fxmlLoader = new FXMLLoader(location);
+        Parent root = null;
+        try {
+            root = (Parent) fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        VueCombat vue = fxmlLoader.getController();

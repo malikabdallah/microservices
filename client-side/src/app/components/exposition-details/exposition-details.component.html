@@ -1,0 +1,68 @@
+<div class="container">
+    <header class="jumbotron">
+        <h1 class="display-3">
+           Exposition  {{expositionCourant.title}}
+        </h1>
+        <br/>
+        <br/>
+
+        <strong>
+            {{expositionCourant.description}}
+        </strong>
+
+        <br/>
+        <button class="btn btn-info" (click)="consulter()">consulter les oeuvres expose!</button>
+
+    </header>
+    <div class="table-container">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col col-xs-6">
+                        <h3 class="panel-title">Tous les avis  sur cette expo</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">pseudo</th>
+                            <th scope="col">avis</th>
+                            <th scope="col">date</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of listCommentaire; index as ind">
+                            <th scope="row">{{ind + 1}}</th>
+                            <td>{{item.username}}</td>
+                            <td>{{item.content}}</td>
+                            <td>{{item.postedDate  | date:"MMM d, y"}}</td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<form name="form-product-update" (ngSubmit)="enregistrerComentaire()" #f="ngForm" novalidate>
+   
+    
+     
+    <div class="form-group">
+        <label for="title">message</label>
+        <input type="text" class="form-control input-text-custom" id="title" name="title" [(ngModel)]="message"  required />
+      </div>
+   
+      <button type="submit" class="btn btn-success">Submit</button>
+
+
+      </form>

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="alert alert-danger" *ngIf="errorMessage">
+        <strong>Erreur!</strong> {{errorMessage}}
+    </div>
+   
+    <div class="course-container">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col col-xs-6">
+                        <h3 class="panel-title">Toutes les expositions</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">titre</th>
+                            <th scope="col">categorie</th>
+                            <th scope="col">date debut</th>
+                            <th scope="col">date fin</th>
+                            <th scope="col">paiement</th>
+                            <th scope="col">Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of expositionList; index as ind">
+                            <th scope="row">{{ind + 1}}</th>
+                            <td>{{item.nomOeuvre}}</td>
+                            <td>{{item.nomOeuvre}}</td>
+                            <td>{{item.nomOeuvre}}</td>
+                            <td>{{item.nomOeuvre}}</td>
+                            <td>
+                                <button class="btn btn-info" (click)="paiement(item)">paiement</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-success" (click)="detail(item)">Detail</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.ChoisirSalle">
+
+    <children>
+        <TableView fx:id="treeTableView" layoutX="19.0" layoutY="77.0" />
+        <Label layoutX="23.0" layoutY="42.0" prefHeight="17.0" prefWidth="123.0" text="choisir salle disponible" />
+        <Button layoutX="54.0" layoutY="504.0" mnemonicParsing="false" onMouseClicked="#gotomenu" text="retour au menu" />
+      <Label layoutX="460.0" layoutY="77.0" text="Exposition" />
+      <Label layoutX="421.0" layoutY="128.0" text="titre" />
+      <Label layoutX="418.0" layoutY="165.0" text="categorie" />
+      <Label layoutX="418.0" layoutY="211.0" text="date debut" />
+      <Label layoutX="418.0" layoutY="260.0" text="date fin" />
+      <Label fx:id="titre" layoutX="501.0" layoutY="128.0" />
+      <Label fx:id="categorie" layoutX="509.0" layoutY="165.0" />
+      <Label fx:id="datedeb" layoutX="501.0" layoutY="211.0" />
+      <Label fx:id="datefi" layoutX="495.0" layoutY="260.0" />
+      <Button fx:id="creer" layoutX="442.0" layoutY="516.0" mnemonicParsing="false" onMouseClicked="#creerExposition" text="lancer exposition" />
+      <Label layoutX="474.0" layoutY="318.0" text="Salle" />
+      <Label layoutX="407.0" layoutY="368.0" text="Nom" />
+      <Label fx:id="nomsalle" layoutX="481.0" layoutY="368.0" />
+    </children>
+
+</AnchorPane>

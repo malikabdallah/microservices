@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+ MUSEE D'HISTOIRE NATURELLE D'ORLEANS
+  </h1>
+  
+</div>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  
+  <div class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a href="/home" class="nav-link">Acceuil</a>
+    </li>
+  </div>
+  <div class="navbar-nav ml-auto" *ngIf="!currentUser">
+    <li class="nav-item">
+      <a href="/register" class="nav-link">
+        <span class="glyphicon glyphicon-user"></span> Inscription
+      </a>
+    </li>
+    <li class="nav-item">
+        <a href="/login" class="nav-link">
+          <span class="glyphicon glyphicon-log-in"></span> Connexion
+        </a>
+    </li>
+  </div>
+  <div class="navbar-nav ml-auto" *ngIf="currentUser">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link">
+          <span class="glyphicon glyphicon-user"></span> {{currentUser.name}}
+        </a>
+      </li>
+      <li class="nav-item">
+          <a (click)="logOut()" class="nav-link">
+            <span class="glyphicon glyphicon-log-in"></span> Deconnexion
+          </a>
+      </li>
+    </div>  
+</nav>
+
+<router-outlet></router-outlet>
